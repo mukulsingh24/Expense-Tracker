@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Form from './components/ExpenseFrom'
 import List from './components/ExpenseList'
+import Item from './components/ExpenseItem'
 
 function App() {
   const [expense,setExpense] = useState([])
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Form addExpense = {addExpense} />
       <List expense = {expense} />
+      <Item />
     </div>
   )
 }
