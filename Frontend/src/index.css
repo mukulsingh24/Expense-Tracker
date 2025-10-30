@@ -295,6 +295,42 @@ body {
   transform: translateY(-1px);
 }
 
+.edit-input {
+  padding: 6px 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.edit-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.btn-save {
+  padding: 6px 16px;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+}
+
+.btn-save:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .app-wrapper {
     grid-template-columns: 1fr;

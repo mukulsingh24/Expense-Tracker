@@ -1,18 +1,26 @@
-import {useState,useCallback,useMemo,} from "react";
+import { useState, useRef, useCallback } from "react";
 import Item from "./ExpenseItem";
+
 const List = (props) => {
   const [editingIndex, setEditingIndex] = useState(null);
   const inputRef = useRef();
-  const editExpense = useCallback((index) =>{
-    setEditingIndex("");
-    
-  },[])
 
-  const deleteExpense = useCallback((index) =>{
-    setEditingIndex("");
+  const editExpense = useCallback((index) => {
+    setEditingIndex(index);
+    if (inputRef.current) inputRef.current.focus();
+  }, [])
 
-  },[])
+  const handleSaveEdit = useCallback((index) => {
+    if (inputRef.current && inputRef.current.value.trim()) {
+      props.updateExpense(index, inputRef.current.value);
+      setEditingIndex(null);
+      inputRef.current.value = "";
+    }
+  }, [props])
 
+  const deleteExpense = useCallback((index) => {
+    props.deleteExpense(index);
+  }, [props])
 
   return (
     <div className="list-wrapper">
@@ -36,6 +44,7 @@ const List = (props) => {
                   deleteExpense={() => deleteExpense(index)}
                   inputRef={inputRef}
                   isEditing={editingIndex === index}
+                  onSaveEdit={() => handleSaveEdit(index)}
                 />
               </div>
             ))
