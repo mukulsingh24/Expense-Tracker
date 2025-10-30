@@ -574,36 +574,13 @@ PORT=5001
 
 ---
 
-## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Write clean, readable code
-- Follow the existing project structure
-- Comment complex logic
-- Test your changes before submitting
-- Update documentation as needed
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
 
 ## 👨‍💻 Author
 
 **Mukul Singh**
 - GitHub: [@mukulsingh24](https://github.com/mukulsingh24)
-- Email: your.email@example.com
+- Email: rmks1004@example.com
 
 ---
 
@@ -613,25 +590,7 @@ For issues, questions, or suggestions, please create an issue on GitHub or conta
 
 ---
 
-## 🙏 Acknowledgments
-
-- React.js community
-- Bootstrap documentation
-- MongoDB documentation
-- Express.js guides
-- Contributors and users
-
----
 
 **Last Updated:** October 30, 2025
 
 **Status:** 🟡 Frontend Complete | 🔴 Backend Pending
-
----
-
-## Quick Links
-
-- [Frontend README](./Frontend/README.md)
-- [Backend README](./Backend/README.md) (To be created)
-- [GitHub Repository](https://github.com/mukulsingh24/Expense-Tracker)
-- [Live Demo](https://expense-tracker-demo.netlify.app) (When deployed)
