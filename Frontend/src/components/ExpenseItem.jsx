@@ -1,16 +1,11 @@
 import {useState,useEffect} from "react";
-
 function Item(props){
     const [edit,setEdit] = useState("")
     return(
         <div>
-            <h1>Expense Items</h1>
-            <button onClick={() => {
-                setEdit({props.value})
-            }}>Edit Expense</button>
-            <button onClick={() =>{
-                setEdit("")
-            }}>Delete Expense</button>
+            <h1>Expese Items</h1>
+            <button>Edit</button>
+            <button>Delete</button>
         </div>
     )
 }
