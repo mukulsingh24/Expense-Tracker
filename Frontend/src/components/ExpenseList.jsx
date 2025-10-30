@@ -1,6 +1,19 @@
-import React from "react";
-
+import {useState,useCallback,useMemo,} from "react";
+import Item from "./ExpenseItem";
 const List = (props) => {
+  const [editingIndex, setEditingIndex] = useState(null);
+  const inputRef = useRef();
+  const editExpense = useCallback((index) =>{
+    setEditingIndex("");
+    
+  },[])
+
+  const deleteExpense = useCallback((index) =>{
+    setEditingIndex("");
+
+  },[])
+
+
   return (
     <div className="list-wrapper">
       <div className="list-container">
@@ -18,12 +31,18 @@ const List = (props) => {
                     </span>
                   </div>
                 </div>
+                <Item 
+                  editExpense={() => editExpense(index)}
+                  deleteExpense={() => deleteExpense(index)}
+                  inputRef={inputRef}
+                  isEditing={editingIndex === index}
+                />
               </div>
             ))
           ) : (
             <div className="list-empty">
               <p>No expenses added yet. Start by adding your first expense!</p>
-            </div>
+            </div>  
           )}
         </div>
       </div>
